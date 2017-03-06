@@ -1,0 +1,16 @@
+package: github.com/donspaulding/external-storage/docs/demo/packet-provisioner
+import:
+- package: github.com/golang/glog
+- package: github.com/donspaulding/external-storage
+  version: 2517d1f
+  subpackages:
+  - controller
+- package: k8s.io/client-go
+  version: v2.0.0-alpha.0-9-g89c6009
+  subpackages:
+  - kubernetes
+  - pkg/api/v1
+  - pkg/types
+  - pkg/util/uuid
+  - pkg/util/wait
+  - rest

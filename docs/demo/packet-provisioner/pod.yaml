@@ -1,0 +1,16 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: packet-provisioner
+spec:
+  containers:
+    - name: packet-provisioner
+      image: packet-provisioner:latest
+      imagePullPolicy: "IfNotPresent"
+      volumeMounts:
+        - name: pv-volume
+          mountPath: /tmp/packet-provisioner
+  volumes:
+    - name: pv-volume
+      packet.net: 
+        datacenter: AMS
